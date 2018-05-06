@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddItemsPage } from '../pages/add-items/add-items'
 import { DataProvider } from '../providers/data/data';
-import { Storage } from '@ionic/storage';
+//import { Storage } from '@ionic/storage';
 /* store data locally */
 import { IonicStorageModule } from '@ionic/storage';
 

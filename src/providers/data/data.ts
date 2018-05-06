@@ -1,26 +1,17 @@
-
-import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage';
-//import { Item } from 'ionic-angular';
-
-
+import { Injectable } from "@angular/core";
+/* to store data locally*/
+import { Storage } from "@ionic/storage";
 
 @Injectable()
 export class DataProvider {
-
-  constructor(private storage:Storage,) {
-   // console.log('Hello DataProvider Provider');
+  constructor(private storage: Storage) {
+    // console.log('Hello DataProvider Provider');
   }
-  saveData(item){
-    this.storage.set('itemDetail',item)
-  
+  saveData(item) {
+    this.storage.set("itemDetail", item);
   }
 
-  getData(item){
-    this.storage.get('itemDetail')
+  getData() {
+    this.storage.get("itemDetail");
   }
-
 }
-
-
-
