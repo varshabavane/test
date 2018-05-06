@@ -3,6 +3,7 @@ import { NavController, NavParams } from "ionic-angular";
 import { AddItemsPage } from "../add-items/add-items";
 import { DataProvider } from "../../providers/data/data";
 
+
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
@@ -14,7 +15,7 @@ export class HomePage {
   description;
   title;
 
-  constructor(public navCtrl: NavController, public navparams: NavParams, private data:DataProvider) {}
+  constructor(public navCtrl: NavController, public navparams: NavParams, public data:DataProvider) {}
 
   add(item) {
     this.navCtrl.push(AddItemsPage, {});

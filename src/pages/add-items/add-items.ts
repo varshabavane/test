@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
+import { DataProvider } from "../../providers/data/data";
+//import { Storage } from "@ionic/storage";
 //import { HomePage } from "../home/home";
 
 @Component({
@@ -13,14 +15,19 @@ export class AddItemsPage {
   title;
   description;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public data: DataProvider,
+    //private storage:Storage
+  ) {}
 
   ionViewDidLoad() {
     //-console.log('ionViewDidLoad AddItemsPage');
-    this.date = this.navParams.get('items').date;
-    this.time=this.navParams.get('items').time;
-    this.time=this.navParams.get('items').title;
-    this.time=this.navParams.get('items').description;
+    this.date = this.navParams.get("items").date;
+    this.time = this.navParams.get("items").time;
+    this.time = this.navParams.get("items").title;
+    this.time = this.navParams.get("items").description;
   }
 
   save() {
@@ -32,9 +39,8 @@ export class AddItemsPage {
     };
 
     this.items.push(addItems);
-  }
-
-  close() {
     
   }
+
+  close() {}
 }

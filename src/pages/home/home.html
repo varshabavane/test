@@ -14,10 +14,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item-content ngFor="let item of items", i as index>
-      {{items.title}}
-    </ion-item-content>
-     </ion-list> 
-
-</ion-content>
+  <ion-card *ngFor="let item of items">
+    <ion-card-content>
+        {{items.title}}
+    </ion-card-content>
+  </ion-card>
+   </ion-content>
