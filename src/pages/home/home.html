@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar color="royal">
     <ion-title>
-      Ionic Blank
+      ToDo
     </ion-title>
-  </ion-navbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="add(item)">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item-content ngFor="let item of items", i as index>
+      {{items.title}}
+    </ion-item-content>
+     </ion-list> 
+
 </ion-content>
